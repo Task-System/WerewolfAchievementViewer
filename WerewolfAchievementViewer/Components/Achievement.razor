@@ -1,0 +1,12 @@
+﻿@using WerewolfAchievementViewer.Werewolf
+
+<h3>@name</h3>
+<p>@description</p>
+
+@code {
+    [Parameter, EditorRequired]
+    public AchievementId AchievementId { get; set; }
+
+    string name => AchievementId.GetName();
+    string description => AchievementId.GetDescription();
+}

@@ -9,53 +9,95 @@
 
 <PageTitle>Player Achievements</PageTitle>
 
-<h1>Test</h1>
-<p>Test add or remove achievements.</p>
-
-<select @bind="@selectedAchievementId">
-    @foreach (var Item in Enum.GetValues<AchievementId>())
-    {
-        <option value="@Item">@Item</option>
-    }
-</select>
-<p>Selected item: @selectedAchievementId</p>
-<button @onclick="AddItem">Add selected item</button>
-<br />
-<br />
-
-<h2>Achievements</h2>
-<p>url: @url</p>
-<br />
-@foreach (var achievementId in currentBitArray.GetUniqueFlags())
-{
-    <div class="col">
-        <Achievement AchievementId="@achievementId" />
-        <button @onclick="() => RemoveItem(achievementId)">Remove this</button>
+<div class="test-container">
+    <div class="test-header-container">
+        <h1>Test</h1>
+        <p>Test add or remove achievements.</p>
     </div>
-    <br />
-}
+
+    <div class="test-select-container">
+        <select @bind="@selectedAchievementId">
+            @foreach (var Item in Enum.GetValues<AchievementId>())
+            {
+                <option value="@Item">@Item</option>
+            }
+        </select>
+
+        <p>Selected item: @selectedAchievementId</p>
+        <button @onclick="AddItem">Add selected item</button>
+        <button @onclick="AddAllItems">Add all items</button>
+        <button @onclick="RemoveAllItems">Remove all items</button>
+    </div>
+
+    <div class="test-achs-container">
+        <div class="test-achived-container achs-container">
+            <div class="test-achs-header">
+                <h2>Achieved</h2>
+                <a href="@url" target="_blank">View</a>
+            </div>
+
+            <div class="test-achs-items">
+                @foreach (var achievementId in currentBitArray.GetUniqueFlags())
+                {
+                    <div class="test-achived-item">
+                        <Achievement AchievementId="@achievementId" />
+                        <button @onclick="() => RemoveItem(achievementId)">Remove this</button>
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="test-not-achived-container achs-container">
+            <div class="test-achs-header">
+                <h2>Not Achieved</h2>
+            </div>
+
+            <div class="test-achs-items">
+                @foreach (var achievementId in Enum.GetValues<AchievementId>().Where(x => !currentBitArray.HasFlag(x)))
+                {
+                    <div class="test-achived-item">
+                        <Achievement AchievementId="@achievementId" />
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
 
 @code {
     AchievementId selectedAchievementId;
     BitArray currentBitArray = new BitArray(200);
 
-    string url
+    string url => $"https://localhost:7024/achs/{Uri.EscapeDataString(currentBitArray.ToBase64String())}";
+
+    void AddItem(AchievementId achievementId)
     {
-        get
+        if (!currentBitArray.HasFlag(achievementId))
         {
-            var result = JsonSerializer.Serialize(currentBitArray.ToByteArray());
-            var url = $"https://localhost:7024/achs/{result}";
-            return url;
+            currentBitArray.Set(achievementId);
+            InvokeAsync(StateHasChanged);
         }
     }
 
     void AddItem()
     {
-        if (!currentBitArray.HasFlag(selectedAchievementId))
+        AddItem(selectedAchievementId);
+    }
+
+    void AddAllItems()
+    {
+        @foreach (var achievementId in Enum.GetValues<AchievementId>())
         {
-            currentBitArray.Set(selectedAchievementId);
-            InvokeAsync(StateHasChanged);
+            AddItem(achievementId);
         }
+
+        InvokeAsync(StateHasChanged);
+    }
+
+    void RemoveAllItems()
+    {
+        currentBitArray = new(200);
+        InvokeAsync(StateHasChanged);
     }
 
     void RemoveItem(AchievementId achievementId)

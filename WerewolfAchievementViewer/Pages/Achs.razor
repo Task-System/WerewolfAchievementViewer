@@ -1,0 +1,58 @@
+﻿@page "/achs/{code?}"
+
+@using System.Buffers.Binary
+@using System.Collections
+@using System.Text
+@using System.Text.Json
+@using WerewolfAchievementViewer.Components
+@using WerewolfAchievementViewer.Werewolf
+
+<PageTitle>Found Achievements</PageTitle>
+
+<div class="test-container">
+    <div class="test-header-container">
+        <h1>Found achievements</h1>
+        <p>Found achievements based on provided query.</p>
+    </div>
+
+    <div class="test-achs-container">
+        <div class="test-achived-container achs-container">
+            <div class="test-achs-header">
+                <h2>Achieved</h2>
+            </div>
+
+            <div class="test-achs-items">
+                @foreach (var achievementId in actualBytes.GetUniqueFlags())
+                {
+                    <div class="test-achived-item">
+                        <Achievement AchievementId="@achievementId" />
+                    </div>
+                }
+            </div>
+        </div>
+
+        <div class="test-not-achived-container achs-container">
+            <div class="test-achs-header">
+                <h2>Not Achieved</h2>
+            </div>
+
+            <div class="test-achs-items">
+                @foreach (var achievementId in Enum.GetValues<AchievementId>().Where(x => !actualBytes.HasFlag(x)))
+                {
+                    <div class="test-achived-item">
+                        <Achievement AchievementId="@achievementId" />
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string? Code { get; set; } = default;
+
+    BitArray actualBytes => Code is not null?
+        Code.FromBase64String():
+        new BitArray(200);
+}

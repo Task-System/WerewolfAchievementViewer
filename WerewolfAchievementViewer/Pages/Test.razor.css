@@ -1,0 +1,46 @@
+﻿.test-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.test-achs-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.achs-container {
+    padding: 10px;
+    border-radius: 5px;
+    flex-grow: 1;
+    background-color: var(--bs-secondary-bg);
+}
+
+.test-achs-header {
+    margin: 10px;
+}
+
+.test-achs-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.test-achs-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.test-achived-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: var(--bs-tertiary-bg);
+}
+
+.test-achived-item > div {
+    flex-grow: 1;
+}

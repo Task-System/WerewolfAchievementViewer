@@ -10,16 +10,15 @@ public class ExtensionsTests
     [TestMethod]
     public void SetTest()
     {
-        var bytes = new BitArray(200)
+        var result = new BitArray(200)
             .Set(AchievementId.Inconspicuous)
             .Set(AchievementId.IHelped)
             .Set(AchievementId.Firefighter)
-            .ToByteArray();
+            .ToBase64String();
 
         //if (BitConverter.IsLittleEndian)
         //    Array.Reverse(bytes);
 
-        var result = JsonSerializer.Serialize(bytes);
         var url = $"https://localhost:7024/achs/{result}";
         Console.WriteLine(url);
     }

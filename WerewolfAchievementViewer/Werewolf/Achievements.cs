@@ -260,6 +260,9 @@ public static partial class Extensions
         return ret;
     }
 
+    public static string ToBase64String(this BitArray bits) => Convert.ToBase64String(bits.ToByteArray());
+
+    public static BitArray FromBase64String(this string base64) => new BitArray(Convert.FromBase64String(base64));
 
     public static IEnumerable<AchievementId> GetUniqueFlags(this BitArray flags)
     {

@@ -6,10 +6,10 @@ on:
   workflow_dispatch:
 
 env:
-  NETCORE_VERSION: "9.0.x"
+  NETCORE_VERSION: "9.x.x"
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
   DOTNET_CLI_TELEMETRY_OPTOUT: true
-  SRC: "/home/runner/work/WerewolfAchievementViewer/WerewolfAchievementViewer"
+  SRC: "./WerewolfAchievementViewer"
 
 jobs:
   build-and-deploy:
@@ -21,6 +21,9 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '${{ env.NETCORE_VERSION }}'
 
       - name: Change base href in App.razor to match gh repo name 🏷️
         run: |

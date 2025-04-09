@@ -1,0 +1,16 @@
+﻿.achs-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.achs-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: var(--bs-tertiary-bg);
+}
+
+    .achs-item > div {
+        flex-grow: 1;
+    }

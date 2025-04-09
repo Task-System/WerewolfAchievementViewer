@@ -18,32 +18,21 @@
     <div class="test-achs-container">
         <div class="test-achived-container achs-container">
             <div class="test-achs-header">
-                <h2>Achieved</h2>
+                <h2>Achieved:</h2>
             </div>
 
-            <div class="test-achs-items">
-                @foreach (var achievementId in actualBytes.GetUniqueFlags())
-                {
-                    <div class="test-achived-item">
-                        <Achievement AchievementId="@achievementId" />
-                    </div>
-                }
-            </div>
+            <Achievements AchievementIds="@actualBytes.GetUniqueFlags()" />
         </div>
 
         <div class="test-not-achived-container achs-container">
             <div class="test-achs-header">
-                <h2>Not Achieved</h2>
+                <h2>Missing:</h2>
             </div>
 
-            <div class="test-achs-items">
-                @foreach (var achievementId in Enum.GetValues<AchievementId>().Where(x => !actualBytes.HasFlag(x)))
-                {
-                    <div class="test-achived-item">
-                        <Achievement AchievementId="@achievementId" />
-                    </div>
-                }
-            </div>
+            @{
+                var items = Enum.GetValues<AchievementId>().Where(x => !actualBytes.HasFlag(x));
+            }
+            <Achievements AchievementIds="@items" />
         </div>
     </div>
 </div>

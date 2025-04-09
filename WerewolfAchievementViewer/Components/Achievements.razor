@@ -1,12 +1,21 @@
-﻿<h1>All Achievements</h1>
+﻿@using WerewolfAchievementViewer.Werewolf
 
-<br />
-
-@foreach (var achievementId in Werewolf.Achievements.All)
-{
-    <Achievement AchievementId="@achievementId" />
-}
+<div class="achs-items">
+    @foreach (var achievementId in AchievementIds)
+    {
+        <div class="achs-item">
+            <div>
+                <Achievement AchievementId="@achievementId" />
+            </div>
+            @OnAchievementId?.Invoke(achievementId)
+        </div>
+    }
+</div>
 
 @code {
+    [Parameter, EditorRequired]
+    public required IEnumerable<AchievementId> AchievementIds { get; set; }
 
+    [Parameter]
+    public Func<AchievementId, RenderFragment?>? OnAchievementId { get; set; }
 }

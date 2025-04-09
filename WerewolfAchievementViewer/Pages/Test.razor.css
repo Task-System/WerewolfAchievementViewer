@@ -28,19 +28,8 @@
     align-items: center;
 }
 
-.test-achs-items {
+.test-select-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-
-.test-achived-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    background-color: var(--bs-tertiary-bg);
-}
-
-.test-achived-item > div {
-    flex-grow: 1;
 }

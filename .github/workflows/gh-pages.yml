@@ -21,6 +21,9 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '${{ env.NETCORE_VERSION }}'
 
       - name: Change base href in App.razor to match gh repo name 🏷️
         run: |

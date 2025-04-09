@@ -1,8 +1,8 @@
 self.assetsManifest = {
-  "version": "wwfvgTCV",
+  "version": "VNlSK6yk",
   "assets": [
     {
-      "hash": "sha256-En9n9JqK54PqBpKKS4c8if0CvDslOGYVrVoEpKZFY7k=",
+      "hash": "sha256-508x/Jub6jXcL0p/KH3WlqoHaUIX+QzPiAQgsb8Txz8=",
       "url": "WerewolfAchievementViewer.styles.css"
     },
     {
@@ -138,8 +138,8 @@ self.assetsManifest = {
       "url": "_framework/System.Runtime.InteropServices.JavaScript.zp9u3yqbi4.wasm"
     },
     {
-      "hash": "sha256-xO3pHYpSAHNbp6P2/GeSdl6wNNCzrGaY5tlI5u9iXfs=",
-      "url": "_framework/System.Runtime.w5r1irlnwy.wasm"
+      "hash": "sha256-0BAF/vAGVNpbYxgJ9HZrMYWh3E0jQQJyQ/TRRBfE/ws=",
+      "url": "_framework/System.Runtime.o2fyclxm7e.wasm"
     },
     {
       "hash": "sha256-KD5saNzkpUD3A/RXlqBthi/qKA3Sk2nZuNvyfL9+EWc=",
@@ -158,11 +158,11 @@ self.assetsManifest = {
       "url": "_framework/System.f0fr8djds0.wasm"
     },
     {
-      "hash": "sha256-b2K5my1sO9TWtCqiUIaTyMLacYP5rsUeRiXGHotxivg=",
-      "url": "_framework/WerewolfAchievementViewer.houxk8dwtk.wasm"
+      "hash": "sha256-IK2vVLLKx49BSfTBTDkvU82q2O7ORQKpZfKNKzZ2EmA=",
+      "url": "_framework/WerewolfAchievementViewer.c5m8vndu71.wasm"
     },
     {
-      "hash": "sha256-mxjA0LHAGth0rkhgj5dgTXc4W0YTAsttsbWEjw7WOQg=",
+      "hash": "sha256-VaNSXxyl+HxU28XUVW7ad/4xnjFYUAlU2W9XMbEOC5g=",
       "url": "_framework/blazor.boot.json"
     },
     {
@@ -198,7 +198,7 @@ self.assetsManifest = {
       "url": "_framework/icudt_no_CJK.lfu7j35m59.dat"
     },
     {
-      "hash": "sha256-NdR6BBtG0A492/UR/PUoJ0g3Y19lJ4fdogIrJWMC6TE=",
+      "hash": "sha256-ex/qxQux/bACLmA1VWlvhyPAvd//lC6PSwh02zUOkn8=",
       "url": "css/app.css"
     },
     {
@@ -214,7 +214,7 @@ self.assetsManifest = {
       "url": "icon-512.png"
     },
     {
-      "hash": "sha256-gypSawQaH5Ls3KM7JaqxGwP/CZpmw21BFDANQ3sw3Lc=",
+      "hash": "sha256-kQ8Pqc+4DS/+WVXwKWyo9tQUgcz6aUtvAz3Rc4vvUvI=",
       "url": "index.html"
     },
     {

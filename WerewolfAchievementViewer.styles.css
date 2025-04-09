@@ -1,3 +1,20 @@
+/* /Components/Achievements.razor.rz.scp.css */
+.achs-items[b-2evi3boc08] {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.achs-item[b-2evi3boc08] {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: var(--bs-tertiary-bg);
+}
+
+    .achs-item > div[b-2evi3boc08] {
+        flex-grow: 1;
+    }
 /* /Layout/MainLayout.razor.rz.scp.css */
 .page[b-cmwqwq60hb] {
     position: relative;
@@ -76,6 +93,21 @@ main[b-cmwqwq60hb] {
         padding-right: 1.5rem !important;
     }
 }
+
+.main-footer[b-cmwqwq60hb] {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    .main-footer > p[b-cmwqwq60hb] {
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: var(--bs-red);
+    }
 /* /Layout/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-om5ond4d2y] {
     background-color: rgba(255, 255, 255, 0.1);
@@ -190,23 +222,36 @@ main[b-cmwqwq60hb] {
     gap: 10px;
     align-items: center;
 }
-
-.test-achs-items[b-8dwb06z13t] {
+/* /Pages/Home.razor.rz.scp.css */
+.test-container[b-rdnx9jogq3] {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.test-achived-item[b-8dwb06z13t] {
+.test-achs-container[b-rdnx9jogq3] {
+    margin-top: 20px;
     display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    background-color: var(--bs-tertiary-bg);
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-    .test-achived-item > div[b-8dwb06z13t] {
-        flex-grow: 1;
-    }
+.achs-container[b-rdnx9jogq3] {
+    padding: 10px;
+    border-radius: 5px;
+    flex-grow: 1;
+    background-color: var(--bs-secondary-bg);
+}
+
+.test-achs-header[b-rdnx9jogq3] {
+    margin: 10px;
+}
+
+.test-achs-header[b-rdnx9jogq3] {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 /* /Pages/Test.razor.rz.scp.css */
 .test-container[b-ilv06qmr9c] {
     display: flex;
@@ -238,19 +283,8 @@ main[b-cmwqwq60hb] {
     align-items: center;
 }
 
-.test-achs-items[b-ilv06qmr9c] {
+.test-select-container[b-ilv06qmr9c] {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
-
-.test-achived-item[b-ilv06qmr9c] {
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    background-color: var(--bs-tertiary-bg);
-}
-
-.test-achived-item > div[b-ilv06qmr9c] {
-    flex-grow: 1;
 }

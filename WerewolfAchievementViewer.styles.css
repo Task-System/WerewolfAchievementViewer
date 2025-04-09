@@ -288,3 +288,10 @@ main[b-cmwqwq60hb] {
     flex-direction: column;
     gap: 10px;
 }
+
+.test-buttons[b-ilv06qmr9c] {
+    display:flex;
+    gap:5px;
+    flex-wrap: wrap;
+    padding-top: 10px;
+}

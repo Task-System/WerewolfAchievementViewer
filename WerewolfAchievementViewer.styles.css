@@ -94,6 +94,36 @@ main[b-cmwqwq60hb] {
     }
 }
 
+.main-container[b-cmwqwq60hb] {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header-container[b-cmwqwq60hb] {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--bs-secondary-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-body-container[b-cmwqwq60hb] {
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+/*    background-color: var(--bs-secondary-bg);*/
+}
+
+.main-header-controls[b-cmwqwq60hb] {
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+}
+
 .main-footer[b-cmwqwq60hb] {
     padding: 10px;
     display: flex;
@@ -193,14 +223,7 @@ main[b-cmwqwq60hb] {
     }
 }
 /* /Pages/Achs.razor.rz.scp.css */
-.test-container[b-8dwb06z13t] {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
 .test-achs-container[b-8dwb06z13t] {
-    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -223,14 +246,7 @@ main[b-cmwqwq60hb] {
     align-items: center;
 }
 /* /Pages/Home.razor.rz.scp.css */
-.test-container[b-rdnx9jogq3] {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
 .test-achs-container[b-rdnx9jogq3] {
-    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -252,44 +268,38 @@ main[b-cmwqwq60hb] {
     gap: 10px;
     align-items: center;
 }
-/* /Pages/Test.razor.rz.scp.css */
-.test-container[b-ilv06qmr9c] {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.test-achs-container[b-ilv06qmr9c] {
-    margin-top: 20px;
+/* /Pages/Playground.razor.rz.scp.css */
+.test-achs-container[b-3job551h2f] {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    padding-top: 10px;
 }
 
-.achs-container[b-ilv06qmr9c] {
+.achs-container[b-3job551h2f] {
     padding: 10px;
     border-radius: 5px;
     flex-grow: 1;
     background-color: var(--bs-secondary-bg);
 }
 
-.test-achs-header[b-ilv06qmr9c] {
+.test-achs-header[b-3job551h2f] {
     margin: 10px;
 }
 
-.test-achs-header[b-ilv06qmr9c] {
+.test-achs-header[b-3job551h2f] {
     display: flex;
     gap: 10px;
     align-items: center;
 }
 
-.test-select-container[b-ilv06qmr9c] {
+.test-select-container[b-3job551h2f] {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.test-buttons[b-ilv06qmr9c] {
+.test-buttons[b-3job551h2f] {
     display:flex;
     gap:5px;
     flex-wrap: wrap;

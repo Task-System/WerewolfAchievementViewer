@@ -1,9 +1,9 @@
 {
   "mainAssemblyName": "WerewolfAchievementViewer",
   "resources": {
-    "hash": "sha256-lkpWt77hsHZm9Edr1zkYUIyF3V3MT3G0K7FnfDi7FTY=",
+    "hash": "sha256-PA1mvtS+/5qzBgXYDaZkSRuBVgYN4WbdRjMhqZVg3xg=",
     "fingerprinting": {
-      "Microsoft.AspNetCore.Components.g16122opva.wasm": "Microsoft.AspNetCore.Components.wasm",
+      "Microsoft.AspNetCore.Components.b97ci62mzq.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Web.5fnpqqr84r.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
       "Microsoft.AspNetCore.Components.WebAssembly.0prlth0hc4.wasm": "Microsoft.AspNetCore.Components.WebAssembly.wasm",
       "Microsoft.Extensions.Configuration.Abstractions.n3roazub70.wasm": "Microsoft.Extensions.Configuration.Abstractions.wasm",
@@ -36,12 +36,12 @@
       "System.Private.CoreLib.bq951xjhzt.wasm": "System.Private.CoreLib.wasm",
       "System.Private.Uri.gz943ea4rb.wasm": "System.Private.Uri.wasm",
       "System.Runtime.InteropServices.JavaScript.zp9u3yqbi4.wasm": "System.Runtime.InteropServices.JavaScript.wasm",
-      "System.Runtime.o2fyclxm7e.wasm": "System.Runtime.wasm",
+      "System.Runtime.0axz2155bq.wasm": "System.Runtime.wasm",
       "System.Text.Encodings.Web.wmi2z5c0zd.wasm": "System.Text.Encodings.Web.wasm",
       "System.Text.Json.d4lywbkrzl.wasm": "System.Text.Json.wasm",
       "System.Text.RegularExpressions.gjrc7fe0iy.wasm": "System.Text.RegularExpressions.wasm",
       "System.f0fr8djds0.wasm": "System.wasm",
-      "WerewolfAchievementViewer.m4giy37vro.wasm": "WerewolfAchievementViewer.wasm",
+      "WerewolfAchievementViewer.28lzeotdtq.wasm": "WerewolfAchievementViewer.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.native.hvg7u8bimp.js": "dotnet.native.js",
       "dotnet.native.3c4wvb350q.wasm": "dotnet.native.wasm",
@@ -69,7 +69,7 @@
       "System.Runtime.InteropServices.JavaScript.zp9u3yqbi4.wasm": "sha256-t5fC5E2r9YJ+puOWw7YuXXMwvd7LxeR0Zt16THexNM0="
     },
     "assembly": {
-      "Microsoft.AspNetCore.Components.g16122opva.wasm": "sha256-1B7uDy/nwRR0oRkUNrnnSTp4BPBvHbFTzHp/SdBjCvg=",
+      "Microsoft.AspNetCore.Components.b97ci62mzq.wasm": "sha256-v3lIr5BcHXNNuoBWLUFzZKyuLbIsJSb/FxJfl5Z7DwI=",
       "Microsoft.AspNetCore.Components.Web.5fnpqqr84r.wasm": "sha256-0fT5DLMa1voamFmX5/f/aY8oct7a5CLEOHu2Tdn6oCA=",
       "Microsoft.AspNetCore.Components.WebAssembly.0prlth0hc4.wasm": "sha256-jB/Gf1i7eXuQqAzqY/ZONe+hrW3x94pYZlL+G0Cv7Co=",
       "Microsoft.Extensions.Configuration.Abstractions.n3roazub70.wasm": "sha256-M/V9DIZ9otM7/qEt+xn3wagkoRiLOf4JMPyDoo6WUM8=",
@@ -100,12 +100,12 @@
       "System.Net.Primitives.8x3nzqo64g.wasm": "sha256-nB5JS/nQn/pNhPGXYrb1uDoDn3cuo9TQKE1RKnVa648=",
       "System.ObjectModel.wgm2i2b0yp.wasm": "sha256-wNfPvrHDu12m8nAsDGzNZQk23FT+Jj3h9Ewtkzk8Yuc=",
       "System.Private.Uri.gz943ea4rb.wasm": "sha256-jIYb1evFo2gkDf8xh0olHomF3p2bgWDBUG2ObK9o7Oc=",
-      "System.Runtime.o2fyclxm7e.wasm": "sha256-0BAF/vAGVNpbYxgJ9HZrMYWh3E0jQQJyQ/TRRBfE/ws=",
+      "System.Runtime.0axz2155bq.wasm": "sha256-OAnN5Xz55KgNtKURrYxIbZn7mkIVGjZQG64zMLVzsI0=",
       "System.Text.Encodings.Web.wmi2z5c0zd.wasm": "sha256-KD5saNzkpUD3A/RXlqBthi/qKA3Sk2nZuNvyfL9+EWc=",
       "System.Text.Json.d4lywbkrzl.wasm": "sha256-bcs2Qc2k6VNzAJIwFDlLVSFWj4OpxrQR5zsZp6gbsRg=",
       "System.Text.RegularExpressions.gjrc7fe0iy.wasm": "sha256-bPlopc5D66ZLknzJ5PcpsBvpXxGmy7xL7+4gm/cjTdc=",
       "System.f0fr8djds0.wasm": "sha256-v1DeJU321NUwk3KJ0Lf8lQA3zwRfrxNommmMBs1s3Gk=",
-      "WerewolfAchievementViewer.m4giy37vro.wasm": "sha256-2l/dOJYzR/+kPCiNh8NrBL0bwYOOZS+cQXh/IGe8KnI="
+      "WerewolfAchievementViewer.28lzeotdtq.wasm": "sha256-MpTCdol4d8hKIw83Clt979/l3d5ParqQPNr+8AKpGso="
     }
   },
   "cacheBootResources": true,

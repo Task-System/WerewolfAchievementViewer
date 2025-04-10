@@ -10,6 +10,8 @@
     const getStoredTheme = () => localStorage.getItem('theme')
     const setStoredTheme = theme => localStorage.setItem('theme', theme)
 
+    window.setStoredTheme = setStoredTheme;
+
     const getPreferredTheme = () => {
         const storedTheme = getStoredTheme()
         if (storedTheme) {
@@ -19,6 +21,8 @@
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
     }
 
+    window.getPreferredTheme = getPreferredTheme;
+
     const setTheme = theme => {
         if (theme === 'auto') {
             document.documentElement.setAttribute('data-bs-theme', (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'))
@@ -26,6 +30,8 @@
             document.documentElement.setAttribute('data-bs-theme', theme)
         }
     }
+
+    window.setTheme = setTheme;
 
     setTheme(getPreferredTheme())
 

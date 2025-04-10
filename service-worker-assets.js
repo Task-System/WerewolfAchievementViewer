@@ -1,5 +1,5 @@
 self.assetsManifest = {
-  "version": "1itX5q5Y",
+  "version": "AYNNyFXN",
   "assets": [
     {
       "hash": "sha256-InQfW9ylAepGQwjOKUW4I37SzdPUgFLUY/7YEjEaWm0=",
@@ -158,11 +158,11 @@ self.assetsManifest = {
       "url": "_framework/System.f0fr8djds0.wasm"
     },
     {
-      "hash": "sha256-MpTCdol4d8hKIw83Clt979/l3d5ParqQPNr+8AKpGso=",
-      "url": "_framework/WerewolfAchievementViewer.28lzeotdtq.wasm"
+      "hash": "sha256-IIztuOYNkoAD7Fqhv8VCbrZiFhlOPZj3sbty5nJ9ueY=",
+      "url": "_framework/WerewolfAchievementViewer.cd0tdus3w3.wasm"
     },
     {
-      "hash": "sha256-jTdSjpsvH6ROJz6dwamUGK9YUqDfdWCelGknDeb7m6Q=",
+      "hash": "sha256-1Yqw/S31iNy9W6QasEpPcCil8/8abDQetYKLDnvresE=",
       "url": "_framework/blazor.boot.json"
     },
     {

@@ -76,6 +76,36 @@ main {
     }
 }
 
+.main-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-header-container {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--bs-secondary-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.main-body-container {
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+/*    background-color: var(--bs-secondary-bg);*/
+}
+
+.main-header-controls {
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+}
+
 .main-footer {
     padding: 10px;
     display: flex;

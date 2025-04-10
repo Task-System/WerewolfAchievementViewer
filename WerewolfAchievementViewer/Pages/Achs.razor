@@ -4,36 +4,38 @@
 @using System.Collections
 @using System.Text
 @using System.Text.Json
+@using Microsoft.AspNetCore.Components.Sections
 @using WerewolfAchievementViewer.Components
 @using WerewolfAchievementViewer.Werewolf
 
 <PageTitle>Found Achievements</PageTitle>
 
-<div class="test-container">
-    <div class="test-header-container">
-        <h1>Found achievements</h1>
-        <p>Found achievements based on provided query.</p>
+<SectionContent SectionId="MainLayout.HeaderMainText">
+    Found achievements
+</SectionContent>
+
+<SectionContent SectionId="MainLayout.HeaderDescriptionText">
+    Found achievements based on provided query.
+</SectionContent>
+
+<div class="test-achs-container">
+    <div class="test-achived-container achs-container">
+        <div class="test-achs-header">
+            <h2>Achieved:</h2>
+        </div>
+
+        <Achievements AchievementIds="@actualBytes.GetUniqueFlags()" />
     </div>
 
-    <div class="test-achs-container">
-        <div class="test-achived-container achs-container">
-            <div class="test-achs-header">
-                <h2>Achieved:</h2>
-            </div>
-
-            <Achievements AchievementIds="@actualBytes.GetUniqueFlags()" />
+    <div class="test-not-achived-container achs-container">
+        <div class="test-achs-header">
+            <h2>Missing:</h2>
         </div>
 
-        <div class="test-not-achived-container achs-container">
-            <div class="test-achs-header">
-                <h2>Missing:</h2>
-            </div>
-
-            @{
-                var items = Enum.GetValues<AchievementId>().Where(x => !actualBytes.HasFlag(x));
-            }
-            <Achievements AchievementIds="@items" />
-        </div>
+        @{
+            var items = Enum.GetValues<AchievementId>().Where(x => !actualBytes.HasFlag(x));
+        }
+        <Achievements AchievementIds="@items" />
     </div>
 </div>
 

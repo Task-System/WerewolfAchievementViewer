@@ -1,9 +1,59 @@
-﻿@inherits LayoutComponentBase
+﻿@using Microsoft.AspNetCore.Components.Sections
+
+@inherits LayoutComponentBase
+
+@inject IJSRuntime JS
 
 <div class="page">
     <main>
         <article class="content px-4 fira-sans-regular">
-            @Body
+            <div class="main-container">
+                <div class="main-header-container">
+                    <div class="main-header-titles">
+                        <h1>
+                            <SectionOutlet SectionId="HeaderMainText" />
+                        </h1>
+                        <small>
+                            <SectionOutlet SectionId="HeaderDescriptionText" />
+                        </small>
+                    </div>
+                    <div class="main-header-controls">
+                        <NavLink href="./"><i class="bi bi-house-fill"></i></NavLink>
+                        <NavLink href="./playground"><i class="bi bi-joystick"></i></NavLink>
+
+                        <div class="dropdown">
+                            <div class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                @switch(currentTheme)
+                                {
+                                    case "light":
+                                        {
+                                            <i class="bi bi-brightness-high-fill"></i>
+                                            break;
+                                        }
+                                    case "dark":
+                                        {
+                                            <i class="bi bi-moon-stars-fill"></i>
+                                            break;
+                                        }
+                                    case "auto":
+                                        {
+                                            <i class="bi bi-circle-half"></i>
+                                            break;
+                                        }
+                                }
+                            </div>
+                            <ul class="dropdown-menu">
+                                <li @onclick='() => SetTheme("light")' role="button" class="dropdown-item"><i class="bi bi-brightness-high-fill"></i> Light</li>
+                                <li @onclick='() => SetTheme("dark")' role="button" class="dropdown-item"><i class="bi bi-moon-stars-fill"></i> Dark</li>
+                                <li @onclick='() => SetTheme("auto")' role="button" class="dropdown-item"><i class="bi bi-circle-half"></i> Auto</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-body-container">
+                    @Body
+                </div>
+            </div>
         </article>
 
         <div class="main-footer fira-sans-bold">
@@ -11,3 +61,22 @@
         </div>
     </main>
 </div>
+
+@code {
+    internal static object HeaderMainText = new();
+    internal static object HeaderDescriptionText = new();
+
+    string currentTheme = "auto";
+
+    protected override async Task OnInitializedAsync()
+    {
+        currentTheme = await JS.InvokeAsync<string>("getPreferredTheme");
+    }
+
+    async Task SetTheme(string theme)
+    {
+        await JS.InvokeVoidAsync("setTheme", theme);
+        await JS.InvokeVoidAsync("setStoredTheme", theme);
+        currentTheme = theme;
+    }
+}

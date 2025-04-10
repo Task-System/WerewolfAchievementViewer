@@ -1,17 +1,20 @@
 ﻿@page "/"
+
+@using Microsoft.AspNetCore.Components.Sections
 @using WerewolfAchievementViewer.Components
 
 <PageTitle>All Achievements</PageTitle>
 
-<div class="test-container">
-    <div class="test-header-container">
-        <h1>Achievements</h1>
-        <p>View all available achievements.</p>
-    </div>
+<SectionContent SectionId="MainLayout.HeaderMainText">
+    Achievements
+</SectionContent>
 
-    <div class="test-achs-container">
-        <div class="test-achived-container achs-container">
-            <Achievements AchievementIds="Werewolf.Achievements.All" />
-        </div>
+<SectionContent SectionId="MainLayout.HeaderDescriptionText">
+    View all available achievements.
+</SectionContent>
+
+<div class="test-achs-container">
+    <div class="test-achived-container achs-container">
+        <Achievements AchievementIds="Werewolf.Achievements.All" />
     </div>
 </div>

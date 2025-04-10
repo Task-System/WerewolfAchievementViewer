@@ -1,4 +1,4 @@
-﻿@page "/achs/{code?}"
+﻿@page "/achs/{code?}/{name?}"
 
 @using System.Buffers.Binary
 @using System.Collections
@@ -11,7 +11,7 @@
 <PageTitle>Found Achievements</PageTitle>
 
 <SectionContent SectionId="MainLayout.HeaderMainText">
-    Found achievements
+    @(Name is not null ? $"{Name}'s found achievements" : "Found achievements")
 </SectionContent>
 
 <SectionContent SectionId="MainLayout.HeaderDescriptionText">
@@ -42,6 +42,9 @@
 @code {
     [Parameter]
     public string? Code { get; set; } = default;
+
+    [Parameter]
+    public string? Name { get; set; } = default;
 
     BitArray actualBytes => Code is not null?
         Code.FromBase64String():

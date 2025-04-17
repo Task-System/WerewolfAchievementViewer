@@ -1,0 +1,3 @@
+[submodule "NewTsWw.Models.Werewolf"]
+	path = NewTsWw.Models.Werewolf
+	url = https://github.com/Task-System/NewTsWw.Models.Werewolf.git

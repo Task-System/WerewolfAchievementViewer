@@ -15,6 +15,29 @@
     .achs-item > div[b-2evi3boc08] {
         flex-grow: 1;
     }
+/* /Components/AllAchievements.razor.rz.scp.css */
+.test-achs-container[b-xi9at9z4bk] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.achs-container[b-xi9at9z4bk] {
+    padding: 10px;
+    border-radius: 5px;
+    flex-grow: 1;
+    background-color: var(--bs-secondary-bg);
+}
+
+.test-achs-header[b-xi9at9z4bk] {
+    margin: 10px;
+}
+
+.test-achs-header[b-xi9at9z4bk] {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
 /* /Layout/MainLayout.razor.rz.scp.css */
 .page[b-cmwqwq60hb] {
     position: relative;
@@ -223,28 +246,6 @@ main[b-cmwqwq60hb] {
     }
 }
 /* /Pages/Achs.razor.rz.scp.css */
-.test-achs-container[b-8dwb06z13t] {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.achs-container[b-8dwb06z13t] {
-    padding: 10px;
-    border-radius: 5px;
-    flex-grow: 1;
-    background-color: var(--bs-secondary-bg);
-}
-
-.test-achs-header[b-8dwb06z13t] {
-    margin: 10px;
-}
-
-.test-achs-header[b-8dwb06z13t] {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
 /* /Pages/Home.razor.rz.scp.css */
 .test-achs-container[b-rdnx9jogq3] {
     display: flex;

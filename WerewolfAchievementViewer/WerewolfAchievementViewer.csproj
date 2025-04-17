@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\TsWwTelegramClient\NewTsWw.Models.Werewolf\NewTsWw.Models.Werewolf\NewTsWw.Models.Werewolf.csproj" />
+    <ProjectReference Include="..\NewTsWw.Models.Werewolf\NewTsWw.Models.Werewolf\NewTsWw.Models.Werewolf.csproj" />
   </ItemGroup>
 
   <ItemGroup>

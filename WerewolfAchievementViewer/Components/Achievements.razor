@@ -1,20 +1,43 @@
-﻿@using WerewolfAchievementViewer.Werewolf
+﻿@using NewTsWw.Models.Werewolf
+@using WerewolfAchievementViewer.Werewolf
 
 <div class="achs-items">
-    @foreach (var achievementId in AchievementIds)
+    @if (AchievementInfos is not null)
     {
-        <div class="achs-item">
-            <div>
-                <Achievement AchievementId="@achievementId" />
+        @foreach (var achievementInfo in AchievementInfos)
+        {
+            <div class="achs-item">
+                <div>
+                    <Achievement AchievementInfo="@achievementInfo" />
+                </div>
+                @OnAchievementId?.Invoke(achievementInfo.AchievementId)
             </div>
-            @OnAchievementId?.Invoke(achievementId)
-        </div>
+        }
+    }
+    else if (AchievementIds is not null)
+    {
+        @foreach (var achievementId in AchievementIds)
+        {
+            <div class="achs-item">
+                <div>
+                    <Achievement AchievementId="@achievementId" />
+                </div>
+                @OnAchievementId?.Invoke(achievementId)
+            </div>
+        }
+    }
+    else
+    {
+        <h3>Nothing found.</h3>
     }
 </div>
 
 @code {
-    [Parameter, EditorRequired]
-    public required IEnumerable<AchievementId> AchievementIds { get; set; }
+    [Parameter]
+    public IEnumerable<AchievementId>? AchievementIds { get; set; } = null;
+
+    [Parameter]
+    public IEnumerable<AchievementInfo>? AchievementInfos { get; set; } = null;
 
     [Parameter]
     public Func<AchievementId, RenderFragment?>? OnAchievementId { get; set; }

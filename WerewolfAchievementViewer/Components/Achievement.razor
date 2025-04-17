@@ -1,14 +1,31 @@
-﻿@using WerewolfAchievementViewer.Werewolf
+﻿@using NewTsWw.Models.Werewolf
+@using WerewolfAchievementViewer.Werewolf
 
 <div>
-    <h4>@name</h4>
-    <small>@description</small>
+    @if (Info is not null)
+    {
+        <h4>@Info.Name</h4>
+        <small>@Info.Description</small>
+    }
+    else
+    {
+        <h4>Not found!</h4>
+        <small>The requested achievement is not found.</small>
+    }
 </div>
 
 @code {
-    [Parameter, EditorRequired]
+    [Parameter]
     public AchievementId AchievementId { get; set; }
 
-    string name => AchievementId.GetName();
-    string description => AchievementId.GetDescription();
+    [Parameter]
+    public AchievementInfo? AchievementInfo { get; set; }
+
+    AchievementInfo? Info;
+
+    protected override void OnParametersSet()
+    {
+        Info = this.AchievementInfo?? NewTsWw.Models.Werewolf.Achievements.All
+            .FirstOrDefault(x => x.AchievementId == this.AchievementId);
+    }
 }

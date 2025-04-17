@@ -1,0 +1,97 @@
+﻿@page "/player/{endpoint?}/{id:long?}"
+
+@using Microsoft.AspNetCore.Components.Sections
+@using NewTsWw.Models.Werewolf
+@using WerewolfAchievementViewer.Components
+@using WerewolfAchievementViewer.Werewolf
+
+@if (werewolfRequestEndpoint is null)
+{
+    <PageTitle>What're you looking for?!</PageTitle>
+
+    <SectionContent SectionId="MainLayout.HeaderMainText">
+        What?!
+    </SectionContent>
+
+    <SectionContent SectionId="MainLayout.HeaderDescriptionText">
+        What're you looking for?! I can't find such stat.
+    </SectionContent>
+}
+else
+{
+    <PageTitle>@werewolfRequestEndpoint</PageTitle>
+
+    <SectionContent SectionId="MainLayout.HeaderMainText">
+        Viewing player's @werewolfRequestEndpoint.Value.GetName()
+    </SectionContent>
+
+    <SectionContent SectionId="MainLayout.HeaderDescriptionText">
+        @werewolfRequestEndpoint.Value.GetDescription()
+    </SectionContent>
+
+    @if (loading)
+    {
+        <p>Loading stats, please wait ...</p>
+    }
+    else
+    {
+        @switch (werewolfRequestEndpoint)
+        {
+            case WerewolfRequestEndpoint.PlayerAchievements:
+                {
+                    if (loadedAchivements is null)
+                    {
+                        <p>Somethings not right here!</p>
+                    }
+                    else
+                    {
+                        <AllAchievements AchievementInfos="loadedAchivements" />
+                    }
+                    break;
+                }
+        }
+    }
+}
+
+@code {
+    [Parameter]
+    public string? Endpoint { get; set; } = null;
+
+    [Parameter]
+    public long Id { get; set; }
+
+    WerewolfRequestEndpoint? werewolfRequestEndpoint = null;
+
+    protected override void OnParametersSet()
+    {
+        try
+        {
+            werewolfRequestEndpoint = Endpoint is not null
+                ? Enum.Parse<WerewolfRequestEndpoint>(Endpoint)
+                : null;
+        }
+        catch { }
+    }
+
+    bool loading = true;
+    AchievementInfo[]? loadedAchivements;
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (loading)
+        {
+            switch (werewolfRequestEndpoint)
+            {
+                case WerewolfRequestEndpoint.PlayerAchievements:
+                    {
+                        using var wr = new CustomWerewolfRequest();
+                        loadedAchivements = await wr.GetAchievements(Id);
+                        break;
+                    }
+            }
+
+            loading = false;
+            await InvokeAsync(StateHasChanged);
+        }
+    }
+}

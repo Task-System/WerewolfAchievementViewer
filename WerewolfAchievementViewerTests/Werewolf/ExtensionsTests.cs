@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using NewTsWw.Models.Werewolf;
+using System.Collections;
 using System.Text;
 using System.Text.Json;
 

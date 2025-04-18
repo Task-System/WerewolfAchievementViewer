@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "WerewolfAchievementViewer",
   "resources": {
-    "hash": "sha256-Px1PN0pXr/imJhkd9H7kk4M2bX1s78gFZkzEEWZD7Ow=",
+    "hash": "sha256-Zc35+a8vXZHl2bp54c/1HCJ2v4Cooei8HpfMyRxoydc=",
     "fingerprinting": {
       "Microsoft.AspNetCore.Components.q4uu8itskr.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Web.5fnpqqr84r.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
@@ -17,7 +17,7 @@
       "Microsoft.Extensions.Primitives.geznw6vy35.wasm": "Microsoft.Extensions.Primitives.wasm",
       "Microsoft.JSInterop.bdr89uoxtd.wasm": "Microsoft.JSInterop.wasm",
       "Microsoft.JSInterop.WebAssembly.p386u0jty9.wasm": "Microsoft.JSInterop.WebAssembly.wasm",
-      "NewTsWw.Models.Werewolf.ikt5bv0owh.wasm": "NewTsWw.Models.Werewolf.wasm",
+      "NewTsWw.Models.Werewolf.2duambze6t.wasm": "NewTsWw.Models.Werewolf.wasm",
       "System.Collections.Concurrent.15jj5izto0.wasm": "System.Collections.Concurrent.wasm",
       "System.Collections.Immutable.hyi9w42nb9.wasm": "System.Collections.Immutable.wasm",
       "System.Collections.NonGeneric.6o2wb88be1.wasm": "System.Collections.NonGeneric.wasm",
@@ -30,7 +30,7 @@
       "System.Console.7n67arx7bd.wasm": "System.Console.wasm",
       "System.Diagnostics.DiagnosticSource.ps3c82qvas.wasm": "System.Diagnostics.DiagnosticSource.wasm",
       "System.IO.Pipelines.0uhw8kopg1.wasm": "System.IO.Pipelines.wasm",
-      "System.Linq.mbwaismdjg.wasm": "System.Linq.wasm",
+      "System.Linq.emxiaj9wzk.wasm": "System.Linq.wasm",
       "System.Memory.s3k4fpjtbw.wasm": "System.Memory.wasm",
       "System.Net.Http.Json.firoqhkdnq.wasm": "System.Net.Http.Json.wasm",
       "System.Net.Http.tqz08prnr5.wasm": "System.Net.Http.wasm",
@@ -44,7 +44,7 @@
       "System.Text.Json.eumrjaz7x3.wasm": "System.Text.Json.wasm",
       "System.Text.RegularExpressions.gjrc7fe0iy.wasm": "System.Text.RegularExpressions.wasm",
       "System.f0fr8djds0.wasm": "System.wasm",
-      "WerewolfAchievementViewer.8d42joqdz9.wasm": "WerewolfAchievementViewer.wasm",
+      "WerewolfAchievementViewer.6lihm47f9h.wasm": "WerewolfAchievementViewer.wasm",
       "dotnet.js": "dotnet.js",
       "dotnet.native.hvg7u8bimp.js": "dotnet.native.js",
       "dotnet.native.3c4wvb350q.wasm": "dotnet.native.wasm",
@@ -86,7 +86,7 @@
       "Microsoft.Extensions.Primitives.geznw6vy35.wasm": "sha256-+HoDX+e0bGwi8OjZvR5ZpN4OxMMBE8OX4f2wu++wdqE=",
       "Microsoft.JSInterop.bdr89uoxtd.wasm": "sha256-j93883TLWrUsylBnXBVb1aCW34uImOVFvkmgV7v8tx0=",
       "Microsoft.JSInterop.WebAssembly.p386u0jty9.wasm": "sha256-hbzWuXrlepIqY/y+nQ2ZAFer2/njy1dc+Y4LUaAaL5E=",
-      "NewTsWw.Models.Werewolf.ikt5bv0owh.wasm": "sha256-8uuhFxtfPmUa31pdutxL7xCeuZW9yJiTXJqjX8/mN5M=",
+      "NewTsWw.Models.Werewolf.2duambze6t.wasm": "sha256-Nkox65q8mhptDp61P9Cc2xzXVCOYFnKGzMrV0LP6my8=",
       "System.Collections.Concurrent.15jj5izto0.wasm": "sha256-W/vtZ+rFMp6Ad2RptSMexhqjuMxduiExdf84B5Ey2SE=",
       "System.Collections.Immutable.hyi9w42nb9.wasm": "sha256-x6eV1PfrlPOpcKSBWqKosZTrwL8bP3UXZh+JyB58rB0=",
       "System.Collections.NonGeneric.6o2wb88be1.wasm": "sha256-hiCNLBMli9ZrBjl0l9NVvcXG36xkGJF/znLqDS6yYxs=",
@@ -99,7 +99,7 @@
       "System.Console.7n67arx7bd.wasm": "sha256-Y4NIMfrZ43sMuvvoL2ezi5KGYN2qkqchH7s9Y9MJskw=",
       "System.Diagnostics.DiagnosticSource.ps3c82qvas.wasm": "sha256-x7GpRObgn1vqZTVSQPKWaJmi89DhNfSOuwKn+3FVG+Q=",
       "System.IO.Pipelines.0uhw8kopg1.wasm": "sha256-uEVVMYx7abWgasKfPzSB6wOMoCpVEVv4EcEAOCa4ph0=",
-      "System.Linq.mbwaismdjg.wasm": "sha256-3lupFizmnh2jk1QIr7ryYJW9SVQLG3aucc8t1zHS0iE=",
+      "System.Linq.emxiaj9wzk.wasm": "sha256-Sn8lVq1qZmHZon7E+2oZnLs+A7r0mY3XQWf7tUQ76zQ=",
       "System.Memory.s3k4fpjtbw.wasm": "sha256-ON7LdppuSiK+Los/mM4y9ImsccszpWRjTZxs3WPaors=",
       "System.Net.Http.Json.firoqhkdnq.wasm": "sha256-uaDJXUjtVrPMO5gJ5/dikCyyZpnq9v69Cd/kmBYzqkE=",
       "System.Net.Http.tqz08prnr5.wasm": "sha256-C8+aO6iSwmP1+SPzTFDeeffoDZkQm2s4rq5OjEseZWk=",
@@ -111,7 +111,7 @@
       "System.Text.Json.eumrjaz7x3.wasm": "sha256-mggrw7yPAeT+OCcPiWfm+/BuEIMoLo9FBPRUN+Bt+cM=",
       "System.Text.RegularExpressions.gjrc7fe0iy.wasm": "sha256-bPlopc5D66ZLknzJ5PcpsBvpXxGmy7xL7+4gm/cjTdc=",
       "System.f0fr8djds0.wasm": "sha256-v1DeJU321NUwk3KJ0Lf8lQA3zwRfrxNommmMBs1s3Gk=",
-      "WerewolfAchievementViewer.8d42joqdz9.wasm": "sha256-nLVvicEZitdqVObtCnzNXxsM1sgJFVutdJ8JE6vDe8E="
+      "WerewolfAchievementViewer.6lihm47f9h.wasm": "sha256-pvHY7ibey4L1tocTECvn+sYyOUvbR/m5C0cCgxuUmBo="
     }
   },
   "cacheBootResources": true,

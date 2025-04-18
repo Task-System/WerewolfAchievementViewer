@@ -10,6 +10,7 @@
     justify-content: space-between;
     padding: 5px;
     background-color: var(--bs-tertiary-bg);
+    border-radius: 5px;
 }
 
     .achs-item > div[b-2evi3boc08] {
@@ -31,12 +32,61 @@
 
 .test-achs-header[b-xi9at9z4bk] {
     margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .test-achs-header[b-xi9at9z4bk] {
     display: flex;
     gap: 10px;
     align-items: center;
+}
+
+.test-not-achived-parts[b-xi9at9z4bk] {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.test-not-achived-part[b-xi9at9z4bk] {
+    padding: 5px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 3px;
+}
+
+.test-not-achived-part-header[b-xi9at9z4bk] {
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.normal[b-xi9at9z4bk] {
+    border-color: var(--bs-green);
+}
+
+.unavailable[b-xi9at9z4bk] {
+    border-color: var(--bs-red);
+}
+
+.not_via_playing[b-xi9at9z4bk] {
+    border-color: var(--bs-orange);
+}
+
+.normal > .test-not-achived-part-header[b-xi9at9z4bk] {
+    color: white;
+    background-color: var(--bs-green);
+}
+
+.unavailable > .test-not-achived-part-header[b-xi9at9z4bk] {
+    color: white;
+    background-color: var(--bs-red);
+}
+
+.not_via_playing > .test-not-achived-part-header[b-xi9at9z4bk] {
+    color: black;
+    background-color: var(--bs-orange);
 }
 /* /Layout/MainLayout.razor.rz.scp.css */
 .page[b-cmwqwq60hb] {

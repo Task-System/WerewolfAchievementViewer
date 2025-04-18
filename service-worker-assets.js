@@ -1,8 +1,8 @@
 self.assetsManifest = {
-  "version": "ivAdEFlX",
+  "version": "mG7ICV75",
   "assets": [
     {
-      "hash": "sha256-mkKHmJyo+8TGTQK3bHjwBqE1Xt1B+Fa4rHoIaduTm8s=",
+      "hash": "sha256-JVU6b24vF454OI2stRiMRzMEdL0NeaSoqqrSXRbJiUc=",
       "url": "WerewolfAchievementViewer.styles.css"
     },
     {
@@ -30,8 +30,8 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.Extensions.Configuration.Json.jgtmx19396.wasm"
     },
     {
-      "hash": "sha256-k//n3rbeNNL+TqcmR4WRJkjizdOl6P7GyyqeEcWFg4I=",
-      "url": "_framework/Microsoft.Extensions.DependencyInjection.Abstractions.hjrs2dn2vw.wasm"
+      "hash": "sha256-dmvVxmgmr5Q1PLvNIjXQnF2nCWar7lVbE7b/friBcCw=",
+      "url": "_framework/Microsoft.Extensions.DependencyInjection.Abstractions.ea8ydkpa40.wasm"
     },
     {
       "hash": "sha256-wPj/fOeoE7JKOgIYh6OIvl/k3Iw6EPDmmXDjtnQ6rJk=",
@@ -62,8 +62,8 @@ self.assetsManifest = {
       "url": "_framework/Microsoft.JSInterop.bdr89uoxtd.wasm"
     },
     {
-      "hash": "sha256-Nkox65q8mhptDp61P9Cc2xzXVCOYFnKGzMrV0LP6my8=",
-      "url": "_framework/NewTsWw.Models.Werewolf.2duambze6t.wasm"
+      "hash": "sha256-n2tMK4/qjvYtyASQpA6tiPfmLzwwATenvqHiNHsUYYQ=",
+      "url": "_framework/NewTsWw.Models.Werewolf.7i1chymwbu.wasm"
     },
     {
       "hash": "sha256-W/vtZ+rFMp6Ad2RptSMexhqjuMxduiExdf84B5Ey2SE=",
@@ -126,8 +126,8 @@ self.assetsManifest = {
       "url": "_framework/System.Net.Http.Json.firoqhkdnq.wasm"
     },
     {
-      "hash": "sha256-C8+aO6iSwmP1+SPzTFDeeffoDZkQm2s4rq5OjEseZWk=",
-      "url": "_framework/System.Net.Http.tqz08prnr5.wasm"
+      "hash": "sha256-Y3OEH1gIRxE6V1FgXR6ojxU1XIoYIMuVEdyCapzAa1w=",
+      "url": "_framework/System.Net.Http.j8ritvws54.wasm"
     },
     {
       "hash": "sha256-nezaQh05iG5l4rQswqNPl/zET8UwMn5b44CpxdCrhyQ=",
@@ -170,11 +170,11 @@ self.assetsManifest = {
       "url": "_framework/System.f0fr8djds0.wasm"
     },
     {
-      "hash": "sha256-pvHY7ibey4L1tocTECvn+sYyOUvbR/m5C0cCgxuUmBo=",
-      "url": "_framework/WerewolfAchievementViewer.6lihm47f9h.wasm"
+      "hash": "sha256-f9FLae1KdMDo0/1sEplGE2cSOYWNUMEVeNxVMBoSNpQ=",
+      "url": "_framework/WerewolfAchievementViewer.5vi0nytvuc.wasm"
     },
     {
-      "hash": "sha256-9kfgYCl5zWneiNWwyPBvhvrGTNDXQiWnQe+reokXPfs=",
+      "hash": "sha256-HcEzWdVtidPo1Tbpagl5dd3ieaj+K7LUzrostp7YSwk=",
       "url": "_framework/blazor.boot.json"
     },
     {

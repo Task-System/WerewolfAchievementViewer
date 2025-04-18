@@ -183,7 +183,7 @@ main[b-cmwqwq60hb] {
 }
 
 .main-body-container[b-cmwqwq60hb] {
-    padding: 10px;
+    padding-top: 10px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;

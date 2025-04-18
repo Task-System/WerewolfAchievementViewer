@@ -10,9 +10,16 @@
     <div class="test-achived-container achs-container">
         <div class="test-achs-header">
             <h2>Achieved:</h2>
+            <i class="bi bi-caret-down-fill"
+               data-bs-toggle="collapse"
+               data-bs-target="#achived"
+               aria-expanded="true"
+               aria-controls="achived"></i>
         </div>
 
-        <Achievements AchievementInfos="AchievementInfos" />
+        <div class="test-achived-parts collapse show" id="achived">
+            <Achievements AchievementInfos="AchievementInfos" />
+        </div>
     </div>
 
     <div class="test-not-achived-container achs-container">
@@ -20,7 +27,20 @@
             <h2>Missing:</h2>
         </div>
 
-        <Achievements AchievementInfos="MissingAchievements" />
+        <div class="test-not-achived-parts">
+            @foreach(var achieveing in MissingAchievements?
+              .GroupBy(x=> x.DetailedInfo?.AchievingType?? AchievementAchievingType.Normal)?? [])
+            {
+                <div class="test-not-achived-part @ToCSSClass(achieveing.Key)">
+                    <div class="test-not-achived-part-header">
+                        <h3>@achieveing.Key.GetNameAttribute()</h3>
+                        <small>@achieveing.Key.GetDescriptionAttribute()</small>
+                    </div>
+
+                    <Achievements AchievementInfos="achieveing" />
+                </div>
+            }
+        </div>
     </div>
 </div>
 
@@ -44,4 +64,13 @@
         MissingAchievements = NewTsWw.Models.Werewolf.Achievements.All
             .Where(x => !AchievementInfos.Any(y => y.AchievementId == x.AchievementId));
     }
+
+    static string ToCSSClass(AchievementAchievingType achievingType)
+        => achievingType switch
+        {
+            AchievementAchievingType.Normal => "normal",
+            AchievementAchievingType.Unavailable => "unavailable",
+            AchievementAchievingType.NotViaPlaying => "not_via_playing",
+            _ => ""
+        };
 }

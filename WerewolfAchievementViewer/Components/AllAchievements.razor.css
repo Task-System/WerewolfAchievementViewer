@@ -13,10 +13,59 @@
 
 .test-achs-header {
     margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .test-achs-header {
     display: flex;
     gap: 10px;
     align-items: center;
+}
+
+.test-not-achived-parts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.test-not-achived-part {
+    padding: 5px;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 3px;
+}
+
+.test-not-achived-part-header {
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.normal {
+    border-color: var(--bs-green);
+}
+
+.unavailable {
+    border-color: var(--bs-red);
+}
+
+.not_via_playing {
+    border-color: var(--bs-orange);
+}
+
+.normal > .test-not-achived-part-header {
+    color: white;
+    background-color: var(--bs-green);
+}
+
+.unavailable > .test-not-achived-part-header {
+    color: white;
+    background-color: var(--bs-red);
+}
+
+.not_via_playing > .test-not-achived-part-header {
+    color: black;
+    background-color: var(--bs-orange);
 }

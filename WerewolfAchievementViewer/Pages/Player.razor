@@ -1,9 +1,11 @@
-﻿@page "/player/{endpoint?}/{id:long?}"
+﻿@page "/player/{endpoint?}/{id:long?}/{name?}"
 
 @using Microsoft.AspNetCore.Components.Sections
 @using NewTsWw.Models.Werewolf
 @using WerewolfAchievementViewer.Components
 @using WerewolfAchievementViewer.Werewolf
+
+@inject CustomWerewolfRequest Wr
 
 @if (werewolfRequestEndpoint is null)
 {
@@ -22,7 +24,7 @@ else
     <PageTitle>@werewolfRequestEndpoint</PageTitle>
 
     <SectionContent SectionId="MainLayout.HeaderMainText">
-        Viewing player's @werewolfRequestEndpoint.Value.GetName()
+        Viewing @displayName's @werewolfRequestEndpoint.Value.GetName()
     </SectionContent>
 
     <SectionContent SectionId="MainLayout.HeaderDescriptionText">
@@ -60,7 +62,12 @@ else
     [Parameter]
     public long Id { get; set; }
 
+    [Parameter]
+    public string? Name { get; set; } = null;
+
     WerewolfRequestEndpoint? werewolfRequestEndpoint = null;
+
+    string displayName => Name ?? "player";
 
     protected override void OnParametersSet()
     {
@@ -84,8 +91,7 @@ else
             {
                 case WerewolfRequestEndpoint.PlayerAchievements:
                     {
-                        using var wr = new CustomWerewolfRequest();
-                        loadedAchivements = await wr.GetAchievements(Id);
+                        loadedAchivements = await Wr.GetAchievements(Id);
                         break;
                     }
             }

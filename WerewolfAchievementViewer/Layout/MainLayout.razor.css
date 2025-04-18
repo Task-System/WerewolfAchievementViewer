@@ -92,7 +92,7 @@ main {
 }
 
 .main-body-container {
-    padding: 10px;
+    padding-top: 10px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
